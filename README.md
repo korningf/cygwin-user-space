@@ -183,12 +183,6 @@ Manufakture cygwin POSIX in user-space on secondary drive (L:)
 
 ```   
 
-# LICENSE
-
-  [LICENSE.txt](LICENSE.txt)
-
-```   
-
 #-----------------------------------------------------------------------------#
 # (c) Francis Korning 2024.
 #=============================================================================#
