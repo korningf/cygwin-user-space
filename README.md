@@ -52,6 +52,14 @@ Links:
   https://superuser.com/questions/1270302/install-cygwin-on-new-machine-from-local-directory
 
 
+# LICENSE
+
+  [LICENSE.txt](LICENSE.txt)
+
+```   
+
 #-----------------------------------------------------------------------------#
 # (c) Francis Korning 2024.
 #=============================================================================#
+
+```
