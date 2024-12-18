@@ -1,0 +1,16 @@
+*.ipr
+*.iml
+*.iws
+build
+bin
+obj
+target
+.classpath
+.project
+.settings
+.idea
+.java-version
+setup.log
+setup.log.full
+cyg-setup-x86.exe
+cyg-setup-x64.exe

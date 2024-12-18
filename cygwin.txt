@@ -1,0 +1,29 @@
+
+The excellent Cygwin POSIX port for windows serves as the core of our generic platform,
+but it needs to be customised. First Cygwin's installation is automated and standardised
+via a programmatic setup in order to configure users, groups, daemons, paths, permissions. 
+
+Cygwin's implementation requires path we complement it with other tools: notably we need
+a real symbolic link facility at the OS level, for which we use SysInternals NTFS junctions;
+we also need a proper su / sudo facility to install software and manipulate daemons services,
+for which we provide our own port of the su.exe cmd shell (inspired from gtools's su.exe).
+su will also allow us to manipulate system files and maintain the symbolic file structures.
+We also provide chpath.exe (inspired from gtool's pathed.exe) to manipulate system PATHs
+in the winfows registry (unlike regtool or regedit, it allows to prepend, append, and trim).
+
+Admin and cyg_server Users and Groups are configured as is sshd running as an NT service.
+For anythong other than OS system calls or file structure configuration we we rely on sshd.
+To this we add client integration to AD NIS and NFS mounts (SMB may be considered later).
+
+As well as cygwin's base bash shell, we rely on Open SSH and the standard GNU core-utils.
+We also require tcl/tk, perl, networking, wget/wput, GNU glibc, automake, autoconf, libtool.
+All available SCMs are configured as well as diff-patch tools.
+
+We use cygrunsrv and cygserver to run our basic daemons as windows services.  These include
+sshd, as well our port of LAMP (linux, apache, mysql php -cygwin replacing the linux bit).
+all daemons runs as the cyg_server privileged user, and installation is done through exposing
+the real windows administrator - be sure to set the passwords for administratorand cyg_server!
+
+Finally we integrate a port of MIT's Envirnment Modules (aka modulecmd) compiled for cygwin.
+This port is modified to work with chpath to set system MACHINE paths in the windows registry.
+paths include: machine and user PATH, CLASSPATH, LD_LIBRARY_PATH, etc. 
