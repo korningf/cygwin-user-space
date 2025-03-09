@@ -154,7 +154,7 @@ Manufakture cygwin POSIX in user-space on secondary drive (L:)
    
 
 	    net stop cygserver
-	    net stop cyghhtpd     
+	    net stop cyghttpd     
 	    net stop cygsshd
      
 	    
