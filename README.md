@@ -140,7 +140,26 @@ Manufakture cygwin POSIX in user-space on secondary drive (L:)
 	
 	    - logout and log back in as administrator.
     
-    
+
+
+#-----------------------------------------------------------------------------#
+# Preparation:
+#-----------------------------------------------------------------------------#
+
+	Cygwin setup assumes it not already running and locking the cygwin dll.
+ 
+ 	If Manufakture Cygwin has previsouly been installed, kill all shells,
+
+  	terminate all process, and crucially kill all running services daemons.
+   
+
+	    net stop cygserver
+	    net stop cyghhtpd     
+	    net stop cygsshd
+     
+	    
+	
+
 #-----------------------------------------------------------------------------#
 # Installation:
 #-----------------------------------------------------------------------------#
